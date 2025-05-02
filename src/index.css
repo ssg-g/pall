@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-200 dark:bg-gray-900 dark:text-gray-100;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-md px-4 py-2 font-medium shadow-sm transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 text-white hover:from-primary-700 hover:to-primary-600 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:from-primary-600 dark:to-primary-500 dark:hover:from-primary-700 dark:hover:to-primary-600;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary-600 to-secondary-500 text-white hover:from-secondary-700 hover:to-secondary-600 focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 dark:from-secondary-600 dark:to-secondary-500 dark:hover:from-secondary-700 dark:hover:to-secondary-600;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700;
+  }
+  
+  .card {
+    @apply rounded-lg bg-white p-6 shadow-sm transition-all hover:shadow-md dark:bg-gray-800 dark:shadow-none dark:hover:shadow-none;
+  }
+  
+  .card-gradient {
+    @apply relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-white to-gray-50 p-6 shadow-sm backdrop-blur-sm transition-all hover:shadow-md dark:from-gray-800 dark:to-gray-900 dark:shadow-none dark:hover:shadow-none;
+  }
+  
+  .card-gradient::before {
+    @apply absolute inset-0 -z-10 bg-gradient-to-br from-primary-100/20 to-secondary-100/20 opacity-30 dark:from-primary-900/10 dark:to-secondary-900/10;
+    content: '';
+  }
+  
+  .input {
+    @apply w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm transition-all focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:focus:border-primary-400 dark:focus:ring-primary-400;
+  }
+  
+  .label {
+    @apply mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300;
+  }
+  
+  .section-title {
+    @apply mb-4 text-lg font-semibold leading-6 text-gray-900 dark:text-white;
+  }
+  
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-300;
+  }
+  
+  .badge-secondary {
+    @apply bg-secondary-100 text-secondary-800 dark:bg-secondary-900/30 dark:text-secondary-300;
+  }
+  
+  .badge-success {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+  }
+  
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300;
+  }
+  
+  .badge-error {
+    @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+  }
+  
+  .badge-gray {
+    @apply bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300;
+  }
+  
+  .stat-value {
+    @apply text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+  }
+  
+  .stat-label {
+    @apply text-sm font-medium text-gray-500 dark:text-gray-400;
+  }
+  
+  .stat-card {
+    @apply flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md dark:bg-gray-800;
+  }
+  
+  .tab-button {
+    @apply inline-flex items-center gap-1.5 border-b-2 border-transparent px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:border-gray-300 hover:text-gray-900 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:text-gray-200;
+  }
+  
+  .tab-active {
+    @apply border-primary-500 text-primary-600 hover:border-primary-500 hover:text-primary-700 dark:border-primary-400 dark:text-primary-400 dark:hover:border-primary-400 dark:hover:text-primary-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .glass-effect {
+    @apply bg-white bg-opacity-60 backdrop-blur-lg backdrop-filter dark:bg-gray-800 dark:bg-opacity-60;
+  }
+}
